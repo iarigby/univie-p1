@@ -20,9 +20,9 @@ I will add hardware/software details in the beginning of April.
 ### 3.2 Deployed applications
 TBA. I will gather candidates with existing helm charts and straightforward installation instructions. 
 
-> feedback about communication about side effects. maybe redis or rabbitmq or a postgres server
+> need feedback about communication about side effects. maybe redis or rabbitmq or a postgres server
 
-- performance, communiation of microservices - how does the hybrid setting affect it
+- performance, communication of microservices - how does the hybrid setting affect it
 	- what is the setup good for, what not
 
 ### 3.3. Literature 
