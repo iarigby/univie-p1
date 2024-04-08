@@ -32,7 +32,8 @@ nc htz 10250 -v
 sudo kubeadm init --cri-socket unix:///var/run/crio/crio.sock --pod-network-cidr=10.244.0.0/16
 ```
 
-`--pod-network` flag added later because of trouble with Flannel
+`--cri-socket` added after cluster wouldn't initialize with installed docker
+`--pod-network-cidr` flag added later because of trouble with Flannel
 
 #### output logs (first time, without cidr flags)
 ```
