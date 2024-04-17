@@ -1,4 +1,6 @@
+## Install dependencies
 https://docs.fedoraproject.org/en-US/quick-docs/using-kubernetes/
+
 
 ```sh
 sudo dnf update
@@ -10,24 +12,54 @@ sudo firewall-cmd --reload
 ```sh
 sudo dnf install kubernetes kubernetes-client kubernetes-kubeadm -y
 sudo systemctl enable --now kubelet
-kubadm config images pull
+
+sudo dnf install cri-o -y
+sudo systemctl enable --now crio
+
+sudo kubeadm config images pull
 
 sudo dnf install netcat -y
 sudo dnf install ethtool -y
 sudo dnf install iproute-tc -y
-
-sudo dnf install cri-o -y
-sudo systemctl enable --now crio
 ```
 
-checking if ports are open
+### configure dns
+https://community.hetzner.com/tutorials/install-kubernetes-cluster
+```sh
+sudo cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
+overlay
+br_netfilter
+EOF
+```
+
+```sh
+sudo modprobe overlay
+sudo modprobe br_netfilter
+```
+
+```sh
+sudo cat <<EOF | sudo tee /etc/sysctl.d/k8s.conf
+# Allow IP forwarding for kubernetes
+net.bridge.bridge-nf-call-iptables = 1
+net.ipv4.ip_forward                = 1
+net.ipv6.conf.default.forwarding   = 1
+EOF
+```
+
+
+```bash
+sudo sysctl --system
+```
+
+
+### checking if ports are open
 ```sh
 nc -l 10250
 nc htz 10250 -v
 ```
 
 
-#### initialise cluster
+## initialise cluster
 ```shell
 sudo kubeadm init --cri-socket unix:///var/run/crio/crio.sock --pod-network-cidr=10.244.0.0/16
 ```
@@ -150,6 +182,10 @@ I0406 12:02:42.130876   71838 version.go:256] remote version is much newer: v1.2
 [addons] Applied essential addon: CoreDNS
 [addons] Applied essential addon: kube-proxy
 ```
+
+#### output logs (with updated kubernetes version)
+
+
 #### output next steps
 ```
 
@@ -250,10 +286,24 @@ networking:
   dnsDomain: cluster.local
   serviceSubnet: 10.96.0.0/12
   ```
-  
+
+### Coredns not starting
+```sh
+sudo systemctl restart crio
+sudo systemctl restart kubelet
+kubectl rollout restart -n kube-system deployment/coredns
+```
+
+```
+sudo ip link delete cni0 type bridge
+```
+
+### Resetting everything
+
 ```shell
 sudo kubeadm reset
 rm -r ~/.kube
-
 # follow setup, including running lines as a default user
 ```
+
+

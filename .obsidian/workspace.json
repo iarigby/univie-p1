@@ -13,7 +13,31 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Praktikum 1 Draft.md",
+                "file": "progress/01_master_setup.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "cd8ec2edc94ab06f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "checkpoint.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7be459a563c70c2d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "join_token.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 227.5
   },
   "right": {
     "id": "2550c8dfca3299dc",
@@ -86,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Praktikum 1 Draft.md",
+                "file": "progress/01_master_setup.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Praktikum 1 Draft.md",
+                "file": "progress/01_master_setup.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Praktikum 1 Draft.md"
+                "file": "progress/01_master_setup.md"
               }
             }
           }
@@ -147,8 +170,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "911f162b5f59d626",
+  "active": "5c883886e47b80c1",
   "lastOpenFiles": [
+    "Untitled.md",
+    "progress/01_master_setup.md",
+    "checkpoint.md",
+    "join_token.md",
+    "progress/02_worker_setup.md",
+    "progress",
+    "README.md",
+    "Praktikum 1 Reports.md",
+    "emails.md",
+    "Praktikum 1 Draft.md",
+    "notes.md",
+    "Long Term Goals.md",
     "Praktikum 1 Draft.pdf",
     "Plan for Praktikum 1.pdf"
   ]
