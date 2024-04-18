@@ -55,7 +55,7 @@ sudo sysctl --system
 ### checking if ports are open
 ```sh
 nc -l 10250
-nc htz 10250 -v
+nc kube-master 10250 -v
 ```
 
 
