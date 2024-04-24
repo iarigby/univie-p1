@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "5c883886e47b80c1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "progress/01_master_setup.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "cd8ec2edc94ab06f",
             "type": "leaf",
             "state": {
@@ -54,9 +42,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "89de70a6ac65c182",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"

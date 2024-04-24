@@ -306,3 +306,18 @@ rm -r ~/.kube
 ```
 
 
+
+
+```sh
+useradd -m ia
+mkdir /home/ia/.ssh
+cp /root/.ssh/authorized_keys /home/ia/.ssh
+echo "ia ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+chown -R ia:ia /home/ia/.ssh
+passwd ia
+su ia
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown ia:ia $HOME/.kube/config
+```
+
