@@ -55,7 +55,7 @@ sudo sysctl --system
 ### checking if ports are open
 ```sh
 nc -l 10250
-nc htz 10250 -v
+nc kube-master 10250 -v
 ```
 
 
@@ -306,4 +306,19 @@ rm -r ~/.kube
 # follow setup, including running lines as a default user
 ```
 
+
+
+
+```sh
+useradd -m ia
+mkdir /home/ia/.ssh
+cp /root/.ssh/authorized_keys /home/ia/.ssh
+echo "ia ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+chown -R ia:ia /home/ia/.ssh
+passwd ia
+su ia
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown ia:ia $HOME/.kube/config
+```
 
