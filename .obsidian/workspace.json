@@ -4,59 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "d647f76bcfaa789a",
+        "id": "2b96ec7e2bf0b27f",
         "type": "tabs",
         "children": [
           {
-            "id": "cd8ec2edc94ab06f",
+            "id": "bb59cd34e25b2937",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "checkpoint.md",
+                "file": "notes.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "7be459a563c70c2d",
+            "id": "198e70dc0bc26acb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "join_token.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ae0eda64b8933480",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "progress/01_master_setup_2.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "89de70a6ac65c182",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled.md",
-                "mode": "source",
+                "file": "progress/home_node.md",
+                "mode": "preview",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -106,7 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 227.5
+    "width": 300
   },
   "right": {
     "id": "2550c8dfca3299dc",
@@ -122,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "progress/01_master_setup_2.md",
+                "file": "progress/home_node.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "progress/01_master_setup_2.md",
+                "file": "progress/home_node.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "progress/01_master_setup_2.md"
+                "file": "progress/home_node.md"
               }
             }
           }
@@ -183,21 +159,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ae0eda64b8933480",
+  "active": "198e70dc0bc26acb",
   "lastOpenFiles": [
-    "progress/01_master_setup.md",
-    "progress/01_master_setup_2.md",
-    "join_token.md",
-    "checkpoint.md",
-    "Untitled.md",
-    "progress/02_worker_setup.md",
-    "progress",
-    "README.md",
-    "Praktikum 1 Reports.md",
-    "emails.md",
-    "Praktikum 1 Draft.md",
     "notes.md",
-    "Long Term Goals.md",
+    "progress/home_node.md",
+    "progress/01_master_setup_2.md",
+    "progress/01_master_setup.md",
+    "progress/02_worker_setup.md",
+    "reports/240408.md",
+    "progress",
+    "Praktikum 1 Reports.md",
+    "reports",
+    "logs.md",
+    "Praktikum 1 Draft.md",
+    "Untitled",
     "Praktikum 1 Draft.pdf",
     "Plan for Praktikum 1.pdf"
   ]
