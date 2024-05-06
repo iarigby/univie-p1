@@ -8,7 +8,15 @@ The most straightforward solution is getting a fixed ip and port forwarding from
 ##### 2. Tunnel or Relay vps
 The next easy option seems to be using a Cloudflare tunnel. I am not sure though if this will be sufficient, but I will try over the weekend.
 
+###### Outcome
+Cloudflare tunnel offers two configurations: 
+1. [public hostname](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/routing-to-tunnel/) - which binds to a single port, therefore not applicable since kubernetes needs several
+2. [private network](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/private-net/)
+	1. With `cloudflared` - seems also not applicable
+	> Cloudflare Tunnel using `cloudflared` only proxies traffic initiated from a user to a server
+
+	2. by [installing](https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/deployment/manual-deployment/) `warp` on the other servers and setting up [routing](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/private-net/cloudflared/#3-route-private-network-ips-through-warp) - will try next
 ##### 3. VPN
 Third option is to create a virtual private network and connect nodes to it (I guess all of them). I feel like this will not be a straightforward thing for me to do given my skills in linux networking. I would gladly learn this in the future but right now it would be best if I can get 2. working easily
 
-Do you think this reasoning is ok? Are there any other possibilities I missed out?
+- https://docs.hetzner.com/cloud/apps/list/wireguard/
